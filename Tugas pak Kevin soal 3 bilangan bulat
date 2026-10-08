@@ -1,0 +1,148 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMFSx+CspvMioSL8HeyYcnr",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/evan828372/dasar-pplg/blob/main/Tugas%20pak%20Kevin%20soal%203%20bilangan%20bulat\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "NAMA : EVAN FADHILAH\n",
+        "\n",
+        "KELAS : PPLG\n",
+        "\n",
+        "TUGAS\n",
+        "3.Buatlah program yang menerima 2 masukan bilangan bulat,lalu menghitung keliling persegi\n",
+        "panjang!"
+      ],
+      "metadata": {
+        "id": "xGLSv5bVqlzo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9E68UZGXqk1T",
+        "outputId": "ef271035-d581-44e4-8001-1403d4ee45c8"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\n",
+            "Copyright (C) 2023 Free Software Foundation, Inc.\n",
+            "This is free software; see the source for copying conditions.  There is NO\n",
+            "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n",
+            "\n"
+          ]
+        }
+      ],
+      "source": [
+        "!g++ --version"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "%%writefile bilanganbulat.cpp\n",
+        "#include <iostream>\n",
+        "using namespace std;\n",
+        "int main()\n",
+        "{\n",
+        "int panjang,lebar,keliling;\n",
+        "\n",
+        "cout<<\"masukkan panjang:\";\n",
+        "cin>>panjang;\n",
+        "\n",
+        "cout<<\"masukkan lebar:\";\n",
+        "cin>>lebar;\n",
+        "\n",
+        "keliling=2*(panjang+lebar);\n",
+        "\n",
+        "cout<<\"keliling persegi panjang adalah:\"<<keliling<<endl;\n",
+        "return 0;\n",
+        "}"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "K7BcmoBKrGyY",
+        "outputId": "05ed8c56-7a66-4754-d1bc-791e9c32cadc"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Writing bilanganbulat.cpp\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!g++ bilanganbulat.cpp -o main"
+      ],
+      "metadata": {
+        "id": "YFWbHxP5sl3x"
+      },
+      "execution_count": 3,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!./main"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tlJmQrBrsroz",
+        "outputId": "1606d938-ff92-493f-d266-c5c6a13e15c9"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "masukkan panjang:5\n",
+            "masukkan lebar:7\n",
+            "keliling persegi panjang adalah:24\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
