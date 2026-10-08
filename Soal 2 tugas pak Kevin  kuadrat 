@@ -1,0 +1,147 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNxQK0L8CVjJDZEfvD1Dt8q",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/evan828372/dasar-pplg/blob/main/Soal%202%20tugas%20pak%20Kevin%20%20kuadrat%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "NAMA : EVAN FADHILAH\n",
+        "\n",
+        "KELAS : PPLG\n",
+        "\n",
+        "TUGAS\n",
+        "\n",
+        "2.Buatlah program yang menerima sebuah masukan angka,lalu menampilkan hasil kuadrat\n",
+        "dari bilangan tersebut!"
+      ],
+      "metadata": {
+        "id": "JIDnuyAAh9J7"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "P5NNKLrmhGdR",
+        "outputId": "0459dc5f-cd6f-405e-f1fa-ec7eefce781c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\n",
+            "Copyright (C) 2023 Free Software Foundation, Inc.\n",
+            "This is free software; see the source for copying conditions.  There is NO\n",
+            "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n",
+            "\n"
+          ]
+        }
+      ],
+      "source": [
+        "!g++ --version"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "%%writefile kuadrat.cpp\n",
+        "#include <iostream>\n",
+        "using namespace std;\n",
+        "\n",
+        "int main()\n",
+        "{\n",
+        "float angka, kuadrat;\n",
+        "\n",
+        "cout<<\"masukkan sebuah angka:\";\n",
+        "cin>>angka;\n",
+        "\n",
+        "kuadrat= angka * angka;\n",
+        "\n",
+        "cout<<\"kuadrat dari\"<<angka<<\"adalah\"<<kuadrat<<endl;\n",
+        "\n",
+        "return 0;\n",
+        "}"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "U84Zp4TOnTK9",
+        "outputId": "41e92b54-5780-4a6e-f0bb-e5588dbab8c2"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Overwriting kuadrat.cpp\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!g++ kuadrat.cpp -o main"
+      ],
+      "metadata": {
+        "id": "SEGl4dN6pJ5z"
+      },
+      "execution_count": 29,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!./main"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2dYQBtAmpmbb",
+        "outputId": "b2271325-6da3-412a-966e-b0b017188db7"
+      },
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "masukkan sebuah angka:3\n",
+            "kuadrat dari3adalah9\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
